@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Behavior Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cat Behavior Facts</h1>
+        <button id="generateFactBtn">Generate Fact</button>
+        <p id="factDisplay"></p>
+    </div>
+    <script>
+        const catBehaviorFacts = [
+            "Cats spend a significant amount of time grooming themselves, which helps regulate body temperature, stimulate blood flow, and keep their fur clean.",
+            "Known as allogrooming, cats groom each other as a social activity to strengthen bonds and show affection and trust.",
+            "Cats have scent glands on their cheeks, paws, and tail base, which they use to mark territory by rubbing against objects, people, or animals.",
+            "A high, upright tail indicates a happy and confident cat, while a puffed-up tail signals fear or aggression. A slowly swaying tail might mean focus or irritation.",
+            "When a cat slowly blinks at you, it's often referred to as a 'cat kiss,' indicating that the cat feels safe and trusts you.",
+            "Cats sometimes make chirping or trilling sounds when they see birds or prey, expressing excitement or frustration.",
+            "Cats knead with their front paws, a behavior originating from kittenhood to stimulate milk flow, and adult cats knead when content or seeking comfort.",
+            "Cats primarily use meowing to communicate with humans and rarely meow at each other, reserving this form of communication for their human companions.",
+            "Cats have highly mobile ears that can rotate up to 180 degrees, expressing emotions and detecting sounds from different directions, crucial for hunting and staying alert."
+        ];
+
+        document.getElementById('generateFactBtn').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * catBehaviorFacts.length);
+            document.getElementById('factDisplay').textContent = catBehaviorFacts[randomIndex];
+        });
+    </script>
+</body>
+</html>
